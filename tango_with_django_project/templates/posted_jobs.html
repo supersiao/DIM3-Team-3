@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{% load static %}
+
+<head>
+    <link rel = "icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/2158178466/interns-wanted.jpg"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Posted Jobs</title>
+	<link media="all" rel="stylesheet" type="text/css" href="{% static "css/all.css" %}" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.main.js"></script>
+
+</head>
+
+<body>
+	<div id="header">
+		<div class="wrapper">
+		  <p><img src="{% static "img/briefcase.png" %}" width="338" height="326" alt="\" /><img src="{% static "img/text.png" %}" width="500" height="192" />
+		    <label for="textfield">  </label>
+		  </p>
+		  <p><br />
+	      </p>
+<p>&nbsp;</p>
+		  <ul id="nav">
+<li><a href="/rango/employ_dash/">Dashboard</a></li>
+				<li></li> <li><a href="#">Edit profile</a></li>
+				<li></li>
+				<li></li>
+                	<li><a href="/rango/intern_match/">Intern Match</a></li>
+				<li><a href="/rango/posted_job/">Posted Jobs</a></li>
+                  <li><a href="#">Logout</a></li>
+		  </ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="wrapper">
+		  <p>VIEW PAST POSTED JOBS</p>
+		  <p>
+		    <label for="select"></label>
+		    <select name="select" id="select">
+		      <option>Accounting Manager OCBC HQ</option>
+		      <option>IT HELPDESK @ SINGTEL </option>
+	        </select>
+		  </p>
+		  <p>
+		    <input type="submit" name="button" id="button" value="Submit" />
+		  </p>
+		  <p>&nbsp;</p>
+		  <p>&nbsp;</p>
+		  <p>
+		    <label for="textarea"></label>
+		  </p>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="holder">
+			<div class="info">
+				<span class="copy">Copyright (c) 2014 CODINGS SERIOUSLY REVIVED</span>
+			    <ul>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Disclaimer</a></li>
+				</ul>
+		  </div>
+			<ul class="footer-nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Job seekers</a></li>
+				<li><a href="#">Employers</a></li>
+				<li><a href="#">Career Advice</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Newsletter</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

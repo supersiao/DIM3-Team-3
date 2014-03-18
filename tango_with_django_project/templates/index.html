@@ -1,0 +1,167 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <link rel = "icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/2158178466/interns-wanted.jpg"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>JobBoardTemplate</title>
+	<link media="all" rel="stylesheet" type="text/css" href="{% static "css/all.css" %}" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.main.js"></script>
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	width:398px;
+	height:115px;
+	z-index:1;
+	left: 916px;
+	top: 103px;
+}
+    </style>
+</head>
+<body>
+	<div id="header">
+		<div class="wrapper">
+		  <p><img src= "{% static "img/briefcase.png" %}" width="309" height="308" alt="\" /><img src="{% static "img/text.png" %}" width="500" height="192" />
+		    <label for="textfield">  </label>
+		  </p>
+<div id="apDiv1">
+<p>&nbsp;</p>
+		    <p><a href= "/rango/employer_login/"><img src="{% static "img/images (2).jpg" %}" width="80" height="80" /></a>Employer Login	</p>
+		    <p>&nbsp;</p>
+		    <p><a href="/rango/intern_login/"><img src="{% static "img/images (3).jpg" %}" width="80" height="80" /></a>Intern Login</p>
+		    <p>&nbsp;</p>
+		  </div>
+<h2><br />
+      </h2>
+<p>&nbsp;</p>
+		  <ul id="nav">
+<li><a href="#">Job Seekers</a></li>
+				<li><a href="#">Employers</a></li>
+				<li><a href="#">Career advice</a></li>
+				<li><a href="#">FAQ</a></li>
+		  </ul>
+	  </div>
+	</div>
+	<div id="main">
+		<div class="wrapper">
+			<div id="content">
+				<div class="block">
+					<div class="holder">
+						<div class="frame">
+							<div class="block-content">
+								<div class="title">
+									<h2>Job<span>Search</span></h2>
+								</div>
+								<form class="search-form" action="#">
+									<fieldset>
+										<div class="columns-holder">
+											<div class="column">
+												<div class="row">
+													<label for="keyword">Enter keyword(s)</label>
+													<span class="text">
+														<input type="text" class="text" id="keyword" />
+													</span>
+												</div>
+												<div class="row">
+													<label for="job-category">Select a job category</label>
+													<select id="job-category">
+														<option class="default">&nbsp;</option>
+														<option>Category 1</option>
+														<option>Category 2</option>
+													</select>
+												</div>
+											</div>
+											<div class="column">
+												<div class="row">
+													<label for="location">Select location</label>
+													<select id="location">
+														<option class="default">&nbsp;</option>
+														<option>Location 1</option>
+														<option>Location 2</option>
+													</select>
+												</div>
+												<div class="row">
+													<label for="level">Career level</label>
+													<select id="level">
+														<option class="default">&nbsp;</option>
+														<option>Career level 1</option>
+														<option>Career level 2</option>
+													</select>
+												</div>
+											</div>
+											<div class="column">
+												<div class="row">
+													<label for="employer">Employer</label>
+													<select id="employer">
+														<option class="default">&nbsp;</option>
+														<option>Employer 1</option>
+														<option>Employer 2</option>
+													</select>
+												</div>
+												<div class="row">
+													<input type="submit" value="Perform the search" class="submit" />
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+				  <div class="holder">
+						<div class="frame">
+							<div class="title">
+								<h2>Featured<span>categories</span></h2>
+							</div>
+						</div>
+					</div>
+					<!-- TemplateBeginEditable name="EditRegion1" -->
+					<p>Accounting</p>
+					<p>Animation</p>
+					<p>Advertising</p>
+					<p>Banking and Finance</p>
+					<p>Business Informatics</p>
+					<p>Biology</p>
+					<p>Chemistry </p>
+					<p>Childhood Psychology</p>
+					<p>Computer Hardware</p>
+					<p>Computing Science</p>
+					<p>Design </p>
+					<p>Development</p>
+					<p>Culinary</p>
+					<p>Economics</p>
+					<p>Health-care</p>
+					<p>Information Technology</p>
+					<p>Finance				  </p>
+				  <!-- TemplateEndEditable --></div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="holder">
+			<div class="info">
+				<span class="copy">Copyright (c) 2014 CODINGS SERIOUSLY REVIVED</span>
+			    <ul>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Disclaimer</a></li>
+				</ul>
+		  </div>
+			<ul class="footer-nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Job seekers</a></li>
+				<li><a href="#">Employers</a></li>
+				<li><a href="#">Career Advice</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Newsletter</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

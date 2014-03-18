@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{% load static %}
+
+<head>
+    <link rel = "icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/2158178466/interns-wanted.jpg"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Intern Finder</title>
+	<link media="all" rel="stylesheet" type="text/css" href="{% static "css/all.css" %}" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.main.js"></script>
+<style type="text/css">
+#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+	left: 427px;
+	top: 457px;
+}
+</style>
+</head>
+<body>
+	<div id="header">
+		<div class="wrapper">
+		  <p><img src="{% static "img/briefcase.png" %}" width="345" height="335" alt="\" /><img src="{% static "img/text.png" %}" width="500" height="192" />
+		    <label for="textfield">  </label>
+		  </p>
+		  <p>Members Login:</p>
+		  <p>LoginID : 
+		    <label for="textfield2"></label>
+		    <input type="text" name="textfield" id="textfield2" />
+		  </p>
+		  <p>Password: 
+		    <input type="password" name="textfield2" id="textfield" />
+		    <br />
+	      </p>
+<p>
+
+</p>
+		  <ul id="nav">
+<li></li>
+				<li><a href="#">Job Seekers</a></li>
+				<li><a href="#">Employers</a>
+				  <div id="apDiv1">  <a class="btn" href="/rango/employ_dash/">Login</a></div>
+</li>
+				<li><a href="#">Career advice</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+                  <li></li>
+		  </ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="wrapper">
+		  <div>
+		    <div>FAQ ON STUDENT HIRING</div>
+		    <div></div>
+	      </div>
+		  <div>
+		    <ul>
+		      <li>
+		        <div>How do students find out about my internship?</div>
+		        <div>We do a lot of work to make sure the right students discover and apply for your internship postings:
+		          <ul>
+		            <li>Highlight the role in our search results where hundreds of thousands of students search and apply for internships every month.</li>
+		            <li>Directly share your position to our network of university partners, including career centers, departments, and student clubs. We focus efforts on universities that specialize in the industry you are hiring for.</li>
+		            <li>Tweet, blog and share the role through our various community resources.</li>
+		            <li>Much more!</li>
+	              </ul>
+	            </div>
+	          </li>
+	        </ul>
+		    <ul>
+		      <li>
+		        <div>How do I manage my applicants?</div>
+		        <div>When you buy an internship posting on InternMatch you get a dashboard where all your student applications and resumes are saved. You can easily sort, filter, and respond to candidates from this single location! Some of our customers say that this feature alone is worth the cost of buying an internship on InternMatch. Most of our customers choose to direct all their applicants to apply for their internships directly on InternMatch. If you prefer to receive applications by email or to send students to an ATS we give you the option to do this as well.</div>
+	          </li>
+	        </ul>
+	      </div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="holder">
+			<div class="info">
+				<span class="copy">Copyright (c) 2014 CODINGS SERIOUSLY REVIVED</span>
+			    <ul>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Disclaimer</a></li>
+				</ul>
+		  </div>
+			<ul class="footer-nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Job seekers</a></li>
+				<li><a href="#">Employers</a></li>
+				<li><a href="#">Career Advice</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Newsletter</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
