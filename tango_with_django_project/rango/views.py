@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from rango.forms import UserForm, UserProfileForm, CreatePostForm
+from rango.forms import UserForm, UserProfileForm, CreatePostForm, EditProfileForm, CreateJobForm
 from datetime import datetime
 from rango.bing_search import run_query
 from django.contrib.auth.models import User
@@ -86,7 +86,43 @@ def register(request):
 
 def employ_login(request):
     context = RequestContext(request)
-    return render_to_response('employer_login.html', context)
+
+    if request.method == 'POST':
+        # Gather the username and password provided by the user.
+        # This information is obtained from the login form.
+        username = request.POST['employUsername']
+        password = request.POST['employPassword']
+
+        # Use Django's machinery to attempt to see if the username/password
+        # combination is valid - a User object is returned if it is.
+        user = authenticate(username=username, password=password)
+
+         # If we have a User object, the details are correct.
+        # If None (Python's way of representing the absence of a value), no user
+        # with matching credentials was found.
+        if user is not None:
+            # Is the account active? It could have been disabled.
+            if user.is_active:
+                # If the account is valid and active, we can log the user in.
+                # We'll send the user back to the homepage.
+                auth_login(request, user)
+                request.session['sessionUsername'] = username
+
+                return HttpResponseRedirect('../employ_dash/')
+            else:
+                # An inactive account was used - no logging in!
+                return HttpResponse("Your Rango account is disabled.")
+        else:
+            # Bad login details were provided. So we can't log the user in.
+            print "Invalid login details: {0}, {1}".format(username, password)
+            return HttpResponse("Invalid login details supplied.")
+
+    # The request is not a HTTP POST, so display the login form.
+    # This scenario would most likely be a HTTP GET.
+    else:
+        # No context variables to pass to the template system, hence the
+        # blank dictionary object...
+        return render_to_response('employer_login.html', context)
 
 def intern_login(request):
     # Request the context of the request.
@@ -156,7 +192,25 @@ def intern_match(request):
 
 def job_posting(request):
     context = RequestContext(request)
-    return render_to_response('job_postings.html', context)
+
+    session = request.session['sessionUsername']
+    user = User.objects.get(username=session).pk
+    userProfile = UserProfile.objects.get(Username=user).pk
+
+    if request.method == 'POST':
+        form = CreateJobForm(data=request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+
+            return redirect('/rango/intern_dash')
+        else:
+            print form.errors
+
+    else:
+        form = CreateJobForm()
+
+    return render_to_response('job_postings.html',  {'form': form}, context)
 
 def posted_job(request):
     context = RequestContext(request)

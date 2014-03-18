@@ -31,7 +31,17 @@ class CreatePostForm(forms.ModelForm):
         fields = ('name', 'email', 'phone', 'nationality', 'address', 'location', 'levelEdu', 'WorkingExperience', 'userID')
 
 
+class EditProfileForm(forms.ModelForm):
 
 
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password')
+
+
+class CreateJobForm(forms.ModelForm):
+    class Meta:
+        model = Job
+        fields = ('name', 'position', 'postionArea', 'companyID', 'userID' )
 
 

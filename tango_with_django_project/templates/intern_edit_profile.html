@@ -36,25 +36,8 @@
 		  <h1>EDIT PROFILE		  </h1>
 		  <form method="post" action="" id="editInterProfile">
 		  <p>{% csrf_token %} </p>
-		  <p>Password: 
-		    <label for="textfield2"></label>
-		    <span id="sprypassword1">
-            <label for="password1"></label>
-            <input type="password" name="password1" id="password1" />
-          <span class="passwordRequiredMsg">A value is required.</span></span>		  </p>
-		  <p>Confirm Password: 
-		    <label for="textfield3"></label>
-		    <span id="sprypassword2">
-		    <label for="password2"></label>
-		    <input type="password" name="password2" id="password2" />
-	      <span class="passwordRequiredMsg">A value is required.</span></span>		  </p>
-		  <p>Email address: 
-		    <span id="sprytextfield1">
-            <input type="text" name="textfield3" id="textfield" />
-          <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span> </p>
-		  <p>
-		    <input type="submit" name="button" id="button" value="Submit" />
-		  </p>
+		 
+			{{ form.as_p }}
 		  </form>
 		</div>
 	</div>

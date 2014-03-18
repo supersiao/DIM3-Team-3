@@ -27,14 +27,18 @@
 		    <label for="textfield">  </label>
 		  </p>
 		  <p>Members Login:</p>
+            <form action="" method="post" id="employerLogin">
+                <p>{% csrf_token %} </p>
 		  <p>LoginID : 
-		    <label for="textfield2"></label>
-		    <input type="text" name="textfield" id="textfield2" />
+		    <label for="employUsername"></label>
+		    <input type="text" name="employUsername" id="employUsername" />
 		  </p>
 		  <p>Password: 
-		    <input type="password" name="textfield2" id="textfield" />
+		    <input type="password" name="employPassword" id="employPassword" />
 		    <br />
 	      </p>
+          <div id="apDiv1"> <a> <button type="submit" name="submit" class="btn" >Login</button></a></div>
+          </form>
 <p>
 
 </p>

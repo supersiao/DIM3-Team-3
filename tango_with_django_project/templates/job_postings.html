@@ -36,33 +36,18 @@
 	<div id="main">
 		<div class="wrapper">
 		  <p>POST NEW JOB</p>
-		  <p>TITLE :
-		    <label for="textfield2"></label>
-		    <input type="text" name="textfield" id="textfield2" />
-		  </p>
-		  <p>DESCRIPTION: 
-		    <label for="textfield3"></label>
-		    <input type="text" name="textfield2" id="textfield3" />
-		  </p>
-		  <p>YEARS OF EXPERIENCE :
-		    <label for="select"></label>
-		    <select name="select" id="select">
-	        </select>
-		  </p>
-		  <p>JOB SCOPE :
-		    <label for="textarea"></label>
-		    <textarea name="textarea" id="textarea" cols="45" rows="5"></textarea>
-		  </p>
-		  <p>ADDRESS :
-		    <label for="textarea2"></label>
-		    <textarea name="textarea2" id="textarea2" cols="45" rows="5"></textarea>
-		  </p>
+
+            <form method="post" action="">
+            <p>&nbsp;</p>
+
+            {% csrf_token %}
+
+		   {{ form.as_p }}
+
 		  <p>
 		    <input type="submit" name="button" id="button" value="Submit" />
 		  </p>
-		  <p>
-		    <label for="checkbox"></label>
-	      </p>
+		 </form>
 		</div>
 	</div>
 	<div id="footer">
