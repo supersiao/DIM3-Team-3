@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{% load static %}
+
+<head>
+    <link rel = "icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/2158178466/interns-wanted.jpg"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Intern Match</title>
+	<link media="all" rel="stylesheet" type="text/css" href="{% static "css/all.css" %}" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.main.js"></script>
+
+</head>
+
+<body>
+	<div id="header">
+		<div class="wrapper">
+		  <p><img src="{% static "img/briefcase.png" %}" width="338" height="326" alt="\" /><img src="{% static "img/text.png" %}" width="500" height="192" />
+		    <label for="textfield">  </label>
+		  </p>
+		  <p><br />
+	      </p>
+<p>&nbsp;</p>
+		  <ul id="nav">
+<li><a href="/rango/employ_dash/">Dashboard</a></li>
+<li><a href="#">Edit profile</a></li>
+				<li></li>
+				<li></li>
+				<li><a href="/rango/job_posting/">Job Postings</a></li>
+				<li><a href="/rango/posted_job/">Posted Jobs</a></li>
+                  <li><a href="#">Logout</a></li>
+		  </ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="wrapper">
+		  <p>Intern Match</p>
+		  <p>Age :</p>
+		  <p>
+		    <label for="select"></label>
+		    <select name="select" id="select">
+		      <option>20-22</option>
+		      <option>23-25</option>
+	        </select>
+		  </p>
+		  <p>Education Level :</p>
+		  <p>
+		    <label for="select2"></label>
+		    <select name="select2" id="select2">
+		      <option>Undergraduate </option>
+		      <option>Honours</option>
+	        </select>
+		  </p>
+		  <p>Duration Period:</p>
+		  <p>
+		    <label for="select3"></label>
+		    <select name="select3" id="select3">
+		      <option>1 month</option>
+		      <option>3months</option>
+	        </select>
+          </p>
+		  <p>Specialised Fields:</p>
+		  <p>
+		    <input type="checkbox" name="checkbox" id="checkbox" />
+	      Biotechnology</p>
+		  <p>
+		    <input type="checkbox" name="checkbox2" id="checkbox2" />
+	      Information Technology</p>
+		  <p>
+		    <input type="checkbox" name="checkbox3" id="checkbox3" /> 
+	      Computing Science</p>
+		  <p>
+		    <input type="checkbox" name="checkbox4" id="checkbox4" /> 
+	      Accounting</p>
+		  <p>
+		    <input type="checkbox" name="checkbox5" id="checkbox5" /> 
+	      Banking and Finance</p>
+		  <p>
+		    <input type="checkbox" name="checkbox6" id="checkbox6" /> 
+	      Hotel Management</p>
+		  <p>
+		    <input type="submit" name="button" id="button" value="Submit" />
+		  </p>
+		  <p>
+  <label for="checkbox"></label>
+	      </p>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="holder">
+			<div class="info">
+				<span class="copy">Copyright (c) 2014 CODINGS SERIOUSLY REVIVED</span>
+			    <ul>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Disclaimer</a></li>
+				</ul>
+		  </div>
+			<ul class="footer-nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Job seekers</a></li>
+				<li><a href="#">Employers</a></li>
+				<li><a href="#">Career Advice</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Newsletter</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
