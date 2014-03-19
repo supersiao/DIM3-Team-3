@@ -18,26 +18,27 @@
 <body>
 	<div id="header">
 		<div class="wrapper">
-		  <p><img src="{% static "img/briefcase.png" %}" width="338" height="326" alt="\" /><img src="{% static "img/text.png" %}" width="500" height="192" />
+		  <p>
 		    <label for="textfield">  </label>
 		  </p>
 		  <p><br />
-	      </p>
+	      </p><h2><img src="{% static "img/banner.jpg" %}" height="300" alt=""/></h2>
 <p>&nbsp;</p>
-		  <ul id="nav">
-<li></li>
+<ul id="nav">
  <li><a href="/rango/intern_dash/">Dashboard</a></li>
-                  <li><a href="#">Logout</a></li>
-		  </ul>
+             <li><a href="../intern_edit_profile/">Edit profile</a></li>
+				<li><a href="../intern_search/">Employers Search</a></li>
+                 <li><a href="../post_resume/">Post Resume</a></li>
+            <li><a href="/rango/index/">Logout</a></li>
+	  </ul>
 		</div>
 	</div>
 	<div id="main">
 		<div class="wrapper">
 		  <h1>EDIT PROFILE		  </h1>
-		  <form method="post" action="" id="editInterProfile">
-		  <p>{% csrf_token %} </p>
-		 
-			{{ form.as_p }}
+		  <form method="post" action="" id="editInterProfile" enctype="multipart/form-data">{% csrf_token %}
+		   {{ form.as_p }}
+           <p><input type="submit"/></p>
 		  </form>
 		</div>
 	</div>

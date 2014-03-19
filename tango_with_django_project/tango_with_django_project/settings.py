@@ -178,3 +178,5 @@ LOGGING = {
         },
     }
 }
+
+AUTH_PROFILE_MODULE = 'rango.UserProfile'

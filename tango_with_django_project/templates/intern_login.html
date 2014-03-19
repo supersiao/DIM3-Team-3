@@ -24,7 +24,7 @@
 <body>
 	<div id="header">
 		<div class="wrapper">
-		  <p><img src="{% static "img/briefcase.png" %}" width="345" height="335" alt="\" /><img src="{% static "img/text.png" %}" width="500" height="192" />
+		  <p><img src="{% static "img/banner.jpg" %}" height="300" alt=""/>
 		    <label for="textfield">  </label>
 		  </p>
 		  <p>  <p>Members Login:</p>  
@@ -35,10 +35,15 @@
 		    <input type="text" name="internUsername" id="internUsername" placeholder="Username"/>
 		  </p>
 		  <p>Password: 
-		    <input type="password" name="internPassword" id="internPassword" placeholder="Password"/><br />
-	      </p>
-		  <div id="apDiv1"> <a> <button type="submit" name="submit" class="btn" >Login</button></a></div>
-		  </form>
+		    <input type="password" name="internPassword" id="internPassword" placeholder="Password"/>
+		  </p>
+		  <p>
+		    <input type="submit" name="submit" id="submit" value="Login" />
+		    </p>
+
+                  <form action="" id="forgetPass" method="get">
+                <a href="/rango/reset/"> Forget Password?</a>
+          </form>
 <p>&nbsp;</p>
 		  <ul id="nav">
 <li></li>

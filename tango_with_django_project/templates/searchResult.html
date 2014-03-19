@@ -5,7 +5,7 @@
 
 
 <head>
-	<link rel=”stylesheet” href=”css/bootstrap.css”  type=”text/css”/>
+<link rel=”stylesheet” href=”css/bootstrap.css”  type=”text/css”/>
      <script src=”js/bootstrap.js”></script>
     <link rel = "icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/2158178466/interns-wanted.jpg"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,37 +15,55 @@
 	<script type="text/javascript" src="js/jquery.main.js"></script>
 <style type="text/css">
 #apDiv1 {
-	position: absolute;
-	width: 398px;
-	height: 115px;
-	z-index: 1;
-	left: 1491px;
-	top: 72px;
+	position:absolute;
+	width:398px;
+	height:115px;
+	z-index:1;
+	left: 916px;
+	top: 103px;
+}
+
+ #search ul {
+    padding:0;
+    margin: 0;
+ }
+
+ #search li {
+    list-style:none;
+    float: left;
+    padding:0;
+    border: 1px solid #bbb;
+    margin: 0;
+ }
+
+ #search a {
+     text-decoration: none;
+     padding: 10px;
+     text-align: center;
+     color:#000000;
+    display:block;
 }
 #test {
    color:#000000;
-   border: 1px solid #bbb;
+    border: 1px solid #bbb;
 }
- </style>
+
+    </style>
 </head>
-<body>
+<body></body>
 	<div id="header">
 		<div class="wrapper">
-		  <p>
+		  <p><img src="{% static "img/banner.jpg" %}" height="300" alt=""/><br />
 		    <label for="textfield">  </label>
-        <div id="apDiv1">
+		  </p>
+<div id="apDiv1">
 <p>&nbsp;</p>
-		    <p><a href= "/rango/employer_login/"><img src="{% static "img/images (2).png" %}" width="80" height="80" /></a>Employer Login	</p>
-		    <p>&nbsp;</p>
-		    <p><a href="/rango/intern_login/"><img src="{% static "img/images (3).png" %}" width="80" height="80" /></a>Intern Login</p>
-		    <p>&nbsp;</p>
-		  </div> </p>
-<h2><img src="{% static "img/banner.jpg" %}" height="300" alt=""/></ap><br />
+		  
+		  </div>
+<h2><br />
       </h2>
-
 <p>&nbsp;</p>
 		  <ul id="nav">
-          <li><a href="/rango/register">Register</a></li>
 <li><a href="#">Job Seekers</a></li>
 				<li><a href="#">Employers</a></li>
 				<li><a href="#">Career advice</a></li>
@@ -61,43 +79,50 @@
 						<div class="frame">
 							<div class="block-content">
 								<div class="title">
-									<h2>Job<span>Search</span></h2>
+									<h2>Job<span>Search Result</span></h2>
 								</div>
 								<form method="post" class="search-form" action="/rango/search/">
-                                    <p>{%  csrf_token %}</p>
-									<fieldset>
-										<div class="columns-holder">
-											<div class="column">
-												<div class="row">
-													<label for="keyword">Enter keyword(s)</label>
-														<input type="text" name="keyword" class="text" id="keyword" />
-												</div>
-												<div class="row">
-
-												</div>
-											</div>
-											<div class="column">
-												<div class="row">
-                                                    <label for="search">Select search</label>
-													<select id="search" name="search">
-														<option class="default">&nbsp;</option>
-														<option>position</option>
-														<option>PostionArea</option>
-														<option>Employer</option>
-                                                        <option>Name</option>
-													</select>
-												</div>
-												<div class="row">
-
-												</div>
-											</div>
-											<div class="column">
-												<div class="row">
-													<input id="test" type="submit" value="Perform the search" class="submit" />
-												</div>
-											</div>
-										</div>
-									</fieldset>
+                                {%  csrf_token %}
+                                <table border = "1" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            name
+                                        </td>
+                                        <td>
+                                            position
+                                        </td>
+                                        <td>
+                                            postionArea
+                                        </td>
+                                        <td>
+                                            companyID
+                                        </td>
+                                        <td>
+                                            userID
+                                        </td>
+                                    </tr>
+                                    {% for c in keyword %}
+                                    <tr>
+                                        <td>
+                                            {{ c.name }}
+                                        </td>
+                                        <td>
+                                            {{ c.position }}
+                                        </td>
+                                        <td>
+                                            {{ c.postionArea }}
+                                        </td>
+                                        <td>
+                                            {{ c.companyID }}
+                                        </td>
+                                        <td>
+                                            {{ c.userID }}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                                <br>
+                                <br>
 								</form>
 							</div>
 						</div>

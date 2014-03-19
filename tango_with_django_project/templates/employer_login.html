@@ -15,38 +15,44 @@
 	width:200px;
 	height:115px;
 	z-index:1;
-	left: 427px;
-	top: 457px;
+	left: 446px;
+	top: 462px;
 }
 </style>
 </head>
 <body>
 	<div id="header">
 		<div class="wrapper">
-		  <p><img src="{% static "img/briefcase.png" %}" width="345" height="335" alt="\" /><img src="{% static "img/text.png" %}" width="500" height="192" />
+		   <p><img src="{% static "img/banner.jpg" %}" height="300" alt=""/>
 		    <label for="textfield">  </label>
 		  </p>
-		  <p>Members Login:</p>
-            <form action="" method="post" id="employerLogin">
-                <p>{% csrf_token %} </p>
-		  <p>LoginID : 
-		    <label for="employUsername"></label>
-		    <input type="text" name="employUsername" id="employUsername" />
-		  </p>
-		  <p>Password: 
-		    <input type="password" name="employPassword" id="employPassword" />
-		    <br />
-	      </p>
-          <div id="apDiv1"> <a> <button type="submit" name="submit" class="btn" >Login</button></a></div>
-          </form>
-<p>
 
-</p>
+		  <p>Members Login:</p>
+            <form method="post" action="" id="employerLoginForm">
+                <p>{% csrf_token %}</p>
+		  <p>LoginID :
+		    <label for="textfield2"></label>
+		    <input type="text" name="employUsername" placeholder="Username" id="employUsername" />
+		  </p>
+		  <p>Password:
+		    <input type="password" name="employPassword" placeholder="Password" id="employPassword" />
+	      </p>
+		    <input type="submit" name="submit" id="submit" value="Login" />
+           </form>
+              <form action="" id="forgetPass" method="get">
+                <a href="/rango/reset/"> Forget Password?</a>
+
+
+
+
+</form>
+
+<p>&nbsp;</p>
 		  <ul id="nav">
 <li></li>
 				<li><a href="#">Job Seekers</a></li>
 				<li><a href="#">Employers</a>
-				  <div id="apDiv1">  <a class="btn" href="/rango/employ_dash/">Login</a></div>
+
 </li>
 				<li><a href="#">Career advice</a></li>
 				<li><a href="faq.html">FAQ</a></li>

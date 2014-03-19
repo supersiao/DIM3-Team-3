@@ -11,22 +11,25 @@ ROLE_CHOICES = (
 
 class UserProfile(models.Model):
     Username = models.OneToOneField(User, unique=True)
+    firstName = models.CharField(max_length=100)
+    lastName = models.CharField(max_length=100)
+    address = models.CharField(max_length=50)
     role = models.IntegerField(choices=ROLE_CHOICES, default=1)
 
     def __unicode__(self):
         return unicode(self.Username)
 
 
-class Company (models.Model):
+class Company(models.Model):
     companyName = models.CharField(max_length=128)
     website = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
 
     def __unicode__(self):
-         return self.companyName
+        return self.companyName
 
 
-class Job (models.Model):
+class Job(models.Model):
     name = models.CharField(max_length=50)
     position = models.CharField(max_length=50)
     postionArea = models.CharField(max_length=50)
@@ -34,7 +37,7 @@ class Job (models.Model):
     userID = models.ForeignKey(User)
 
     def __unicode__(self):
-         return self.name
+        return self.name
 
 #chamge the database table and import new data. ask yee keng about edit functiona and create function
 class Resume(models.Model):
@@ -49,4 +52,4 @@ class Resume(models.Model):
     userID = models.ForeignKey(User)
 
     def __unicode__(self):
-         return self.name
+        return self.name
